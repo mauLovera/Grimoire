@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import Layout from '@/components/Layout/Layout'
+
+import styles from '@/styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-    </div>
+    <Layout className={styles.container}>
+      Main
+    </Layout>
   )
 }
