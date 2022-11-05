@@ -31,6 +31,10 @@ $clr-orange: #a34c50;
 $clr-light: #e7e7db;
 $clr-dark: #4a2932;
 
-@mixin fontFamily {
+@mixin fontFamilyLogo {
   font-family: 'Righteous', sans-serif;
+}
+
+@mixin fontFamilyLinks {
+  font-family: 'Reem Kufi', sans-serif;
 }

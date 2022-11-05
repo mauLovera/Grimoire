@@ -1,11 +1,11 @@
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/Home.module.scss'
+import styles from '@/styles/pages/Classes.module.scss'
 
-export default function Home() {
+export default function ClassesPage() {
   return (
     <Layout className={styles.container}>
-      Main
+      Classes
     </Layout>
   )
 }

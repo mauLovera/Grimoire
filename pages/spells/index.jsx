@@ -1,11 +1,11 @@
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/Home.module.scss'
+import styles from '@/styles/pages/Spells.module.scss'
 
-export default function Home() {
+export default function SpellsPage() {
   return (
     <Layout className={styles.container}>
-      Main
+      Spells
     </Layout>
   )
 }

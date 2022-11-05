@@ -8,7 +8,7 @@ export default function Layout({ children, title, keywords, description }) {
     <>
       <Head></Head>
       <Header />
-      {/* <main>{children}</main> */}
+      <main>{children}</main>
       {/* <Footer /> */}
     </>
   )

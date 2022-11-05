@@ -2,8 +2,8 @@
 
 .container {
   width: 100%;
-  height: $size_64px;
-  
+  height: fit-content;
+
   display: flex;
   align-items: center;
 
@@ -13,16 +13,30 @@
   .logo {
     font-size: $size_20px;
     color: $clr-red1;
-
-    @include fontFamily;
+    @include fontFamilyLogo;
   }
 
   nav {
-    padding-left: $size_24px;
-    
+    position: relative;
+    top: 2px;
+
+    font-weight: 500;
+    @include fontFamilyLinks;
+    padding-left: $size_32px;
+
     ul {
       display: flex;
-      gap: $size_12px;
+      gap: $size_16px;
+
+      a {
+        &:hover {
+          color: $clr-orange;
+        }
+      }
     }
   }
+}
+
+.active {
+  color: $clr-orange;
 }
