@@ -1,0 +1,28 @@
+@import '~styles/palette.scss';
+
+.container {
+  width: 100%;
+  height: $size_64px;
+  
+  display: flex;
+  align-items: center;
+
+  padding-inline: $size_16px;
+  background-color: $clr-light;
+
+  .logo {
+    font-size: $size_20px;
+    color: $clr-red1;
+
+    @include fontFamily;
+  }
+
+  nav {
+    padding-left: $size_24px;
+    
+    ul {
+      display: flex;
+      gap: $size_12px;
+    }
+  }
+}

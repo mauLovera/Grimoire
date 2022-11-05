@@ -1,0 +1,36 @@
+@function toRem($value) {
+  $rem: ($value / 16) + rem;
+  @return $rem;
+}
+
+$size_4px: toRem(4);
+$size_8px: toRem(8);
+$size_12px: toRem(12);
+$size_16px: toRem(16);
+$size_18px: toRem(18);
+$size_20px: toRem(20);
+$size_24px: toRem(24);
+$size_32px: toRem(32);
+$size_48px: toRem(48);
+$size_52px: toRem(52);
+$size_64px: toRem(64);
+$size_96px: toRem(96);
+$size_128px: toRem(128);
+$size_192px: toRem(192);
+$size_256px: toRem(256);
+$size_384px: toRem(384);
+$size_512px: toRem(512);
+$size_640px: toRem(640);
+$size_768px: toRem(768);
+$size_960px: toRem(960);
+
+$clr-red1: #e8443c;
+$clr-red2: #e94445;
+$clr-green: #264c5e;
+$clr-orange: #a34c50;
+$clr-light: #e7e7db;
+$clr-dark: #4a2932;
+
+@mixin fontFamily {
+  font-family: 'Righteous', sans-serif;
+}
