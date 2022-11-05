@@ -29,7 +29,7 @@ export default function Home() {
           <p>
             Having various sizes, strengths, and weaknesses, a monster is the
             most common adversary your characters will face in the world.
-            Knowing their skills, type, speed, saving throws, and hit points is
+            Knowing their skills, type, speed, saving throws, and hit points are
             crucial to your character{"'"}s survival and management of them as
             an ever-present threat.
           </p>
@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.boxContainer}>
           <h3>Spells</h3>
           <p>
-            A spell is a discrete magical Effect, a single shaping of the
+            A spell is a discrete magical effect, a single shaping of the
             magical energies that suffuse the multiverse into a specific,
             limited expression. In casting a spell, a character carefully plucks
             at the invisible strands of Raw Magic suffusing the world, pins them

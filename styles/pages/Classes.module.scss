@@ -1,0 +1,89 @@
+@import '~styles/palette.scss';
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+
+  min-height: 35vh;
+  @include fontFamilyLogo;
+  color: $clr-light;
+
+  h1 {
+    font-size: $size_48px;
+  }
+
+  h2 {
+    @include fontFamilyLinks;
+    font-size: $size_20px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  padding: $size_4px;
+
+  // @media (max-width: 500px) {
+  //   flex-direction: column;
+  // }
+
+  min-height: fit-content;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.507);
+  color: $clr-light;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+    width: $size_960px;
+    height: 100%;
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $size_8px;
+      height: fit-content;
+      flex: 1 1 33%;
+      height: 25%;
+      @include fontFamilyLinks;
+
+      // Borders
+      border-top: 1px solid $clr-light;
+      border-right: 1px solid $clr-light;
+      &:nth-child(1) {
+        border-left: 1px solid $clr-light;
+      }
+      &:nth-child(4) {
+        border-left: 1px solid $clr-light;
+      }
+      &:nth-child(7) {
+        border-left: 1px solid $clr-light;
+      }
+      &:nth-child(10) {
+        border-left: 1px solid $clr-light;
+      }
+      &:nth-last-child(-n+3) {
+        border-bottom: 1px solid $clr-light;
+      }
+
+      .image {
+        filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
+          brightness(93%) contrast(97%);
+      }
+      
+      p {
+        font-size: $size_16px;
+      }
+    }
+  }
+}

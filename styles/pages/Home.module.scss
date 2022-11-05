@@ -14,6 +14,11 @@
   h1 {
     font-size: $size_48px;
   }
+
+  h2 {
+    @include fontFamilyLinks;
+    font-size: $size_20px;
+  }
 }
 
 .content {
@@ -40,7 +45,7 @@
     width: 33.3%;
     padding: $size_24px;
 
-    border-right: 1px solid white;
+    border-right: 1px solid $clr-light;
     &:last-child {
       border: unset;
     }
