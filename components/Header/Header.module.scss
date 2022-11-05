@@ -1,22 +1,25 @@
 @import '~styles/palette.scss';
 
 .container {
+  position: fixed;
   width: 100%;
-  height: fit-content;
+  height: $size_64px;
 
   display: flex;
   align-items: center;
 
   padding-inline: $size_16px;
-  background-color: $clr-light;
+  background-color: transparent;
 
-  box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.42);
+  // box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
+  // -webkit-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
+  // -moz-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
+
+  z-index: 10;
 
   .logo {
     font-size: $size_20px;
-    color: $clr-red1;
+    color: $clr-light;
     @include fontFamilyLogo;
   }
 
@@ -31,10 +34,11 @@
     ul {
       display: flex;
       gap: $size_16px;
+      color: $clr-light;
 
       a {
         &:hover {
-          color: $clr-orange;
+          color: $clr-red1;
         }
       }
     }

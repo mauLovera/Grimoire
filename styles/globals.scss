@@ -1,1 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Righteous&display=swap');
+
+@import '~styles/palette.scss';
+
+body {
+  background-color: $clr-light;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.582) 100%, rgba(0,0,0,0) 100%), url('/fantasy.jpg');
+  background-position: top;
+  height: 100vh;
+}

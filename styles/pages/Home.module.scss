@@ -5,10 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 30vh;
-  outline: 1px solid red;
+  flex: 0 1 auto;
 
+  min-height: 45vh;
   @include fontFamilyLogo;
+  color: $clr-light;
 
   h1 {
     font-size: $size_48px;
@@ -19,18 +20,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: $size_48px;
-  min-height: 30vh;
-  outline: 1px solid red;
+  flex: 1 1 auto;
 
-  .box {
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  min-height: 40vh;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.507);
+  color: $clr-light;
+
+  .boxContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: $size_192px;
-    width: $size_192px;
-    outline: 1px solid black;
-    background-color: $clr-light;
+    flex-direction: column;
+    gap: $size_18px;
+    height: 100%;
+    width: 33.3%;
+    padding: $size_24px;
+
+    border-right: 1px solid white;
+    &:last-child {
+      border: unset;
+    }
+
+    h3 {
+      @include fontFamilyLinks;
+      font-size: $size_32px;
+    }
+
+    p {
+      max-width: 20rem;
+    }
+
+    a {
+      margin-top: $size_12px;
+      width: fit-content;
+      button {
+        background-color: $clr-light;
+        padding: $size_8px $size_24px;
+        border: 2px solid $clr-light;
+        color: $clr-dark;
+        font-size: $size_16px;
+        @include fontFamilyLinks;
+        cursor: pointer;
+      }
+    }
   }
 }
