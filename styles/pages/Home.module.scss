@@ -1,0 +1,36 @@
+@import '~styles/palette.scss';
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  outline: 1px solid red;
+
+  @include fontFamilyLogo;
+
+  h1 {
+    font-size: $size_48px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $size_48px;
+  min-height: 30vh;
+  outline: 1px solid red;
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: $size_192px;
+    width: $size_192px;
+    outline: 1px solid black;
+    background-color: $clr-light;
+  }
+}

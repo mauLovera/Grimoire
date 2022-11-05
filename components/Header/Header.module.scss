@@ -10,6 +10,10 @@
   padding-inline: $size_16px;
   background-color: $clr-light;
 
+  box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.42);
+
   .logo {
     font-size: $size_20px;
     color: $clr-red1;
