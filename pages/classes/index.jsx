@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/Classes.module.scss'
+import styles from '@/styles/pages/classes/Classes.module.scss'
 import { getClassList } from 'services/api-calls'
 
 export default function ClassesPage({ classes }) {
@@ -17,7 +17,13 @@ export default function ClassesPage({ classes }) {
       <section className={styles.container}>
         <div className={styles.content}>
           {classes.results.map((clss) => (
-            <Link href="/classes" key={clss.index} className={styles.row}>
+            <Link
+              href={{
+                pathname: `/classes/${clss.name.toLowerCase()}`,
+              }}
+              key={clss.index}
+              className={styles.row}
+            >
               <div className={styles.image}>
                 <Image
                   src={`/class-images/${clss.name}.svg`}
@@ -37,10 +43,9 @@ export default function ClassesPage({ classes }) {
 
 export async function getStaticProps() {
   const res = await getClassList()
-  const classes = res
   return {
     props: {
-      classes,
+      classes: res,
     },
   }
 }
