@@ -19,6 +19,11 @@ export const getMonsterList = async () => {
   return res.json()
 }
 
+export const getMonsterSearch = async (formData) => {
+  const res = await fetch(`${baseUrl}/monsters/?name=${formData.query}`)
+  return res.json()
+}
+
 export const getMonsterDetails = async (monsterName) => {
   const res = await fetch(`${baseUrl}/monsters/${monsterName}`)
   return res.json()
@@ -28,6 +33,11 @@ export const getMonsterDetails = async (monsterName) => {
 
 export const getSpellList = async () => {
   const res = await fetch(`${baseUrl}/spells`)
+  return res.json()
+}
+
+export const getSpellSearch = async (formData) => {
+  const res = await fetch(`${baseUrl}/spells/?name=${formData.query}`)
   return res.json()
 }
 
