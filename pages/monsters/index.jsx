@@ -72,7 +72,7 @@ export default function MonstersPage({ monsters }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await getMonsterList()
   return {
     props: {
