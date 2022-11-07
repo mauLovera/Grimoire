@@ -1,0 +1,79 @@
+@import '~styles/palette.scss';
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  margin-top: $size_48px;
+
+  min-height: 35vh;
+  @include fontFamilyLogo;
+  color: $clr-light;
+
+  h1 {
+    font-size: $size_48px;
+  }
+
+  h2 {
+    @include fontFamilyLinks;
+    font-size: $size_20px;
+  }
+
+  .search {
+    display: flex;
+    height: max-content;
+    margin-top: $size_32px;
+
+    input {
+      background-color: transparent;
+      outline: 1px solid $clr-light;
+      border: none;
+      color: $clr-light;
+      padding: $size_4px $size_8px;
+      font-size: $size_20px;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: $size_48px;
+      width: $size_48px;
+      
+      background-color: transparent;
+      color: $clr-light;
+      outline: 1px solid $clr-light;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: $size_16px;
+  
+
+  background-color: rgba(0, 0, 0, 0.507);
+  color: $clr-light;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 1500px;
+    width: 100%;
+
+    p {
+      width: fit-content;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
