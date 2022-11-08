@@ -51,7 +51,7 @@ export default function SpellsPage({ spells }) {
             ? spellsData.map((spell) => {
                 return (
                   <>
-                    <Link href={`/monsters/${spell.index}`}>
+                    <Link href={`/spells/${spell.index}`}>
                       <p>{spell.name}</p>
                     </Link>
                   </>
@@ -60,7 +60,7 @@ export default function SpellsPage({ spells }) {
             : spells.results.map((spell) => {
                 return (
                   <>
-                    <Link href={`/monsters/${spell.index}`}>
+                    <Link href={`/spells/${spell.index}`}>
                       <p>{spell.name}</p>
                     </Link>
                   </>

@@ -1,0 +1,93 @@
+@import '~styles/palette.scss';
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  margin-block: $size_20px;
+
+  min-height: 35vh;
+  @include fontFamilyLogo;
+  color: $clr-light;
+
+  h1 {
+    font-size: $size_48px;
+  }
+
+  h2 {
+    @include fontFamilyLinks;
+    font-size: $size_20px;
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  .image {
+    filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
+      brightness(93%) contrast(97%);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  padding: $size_4px;
+
+  min-height: fit-content;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.507);
+  color: $clr-light;
+
+  .content {
+    display: flex;
+    gap: $size_48px;
+    padding: $size_20px;
+    height: 100%;
+    margin: 0 auto;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: $size_128px;
+      height: fit-content;
+
+      padding: $size_16px;
+      gap: $size_8px;
+
+      background-color: black;
+      outline: 2px solid $clr-light;
+
+      h1 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include fontFamilyLinks;
+        text-decoration: underline;
+      }
+
+      p {
+        font-size: $size_20px;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: $size_8px;
+      height: fit-content;
+      max-width: 40rem;
+
+      h1 {
+        @include fontFamilyLinks;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import Link from 'next/link'
+import { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 
 import Layout from '@/components/Layout/Layout'
