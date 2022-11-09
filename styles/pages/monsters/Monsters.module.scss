@@ -6,13 +6,14 @@
   justify-content: center;
   align-items: center;
   flex: 0 1 auto;
-  margin-top: $size_48px;
+  
 
-  min-height: 35vh;
+  height: $size_384px;
   @include fontFamilyLogo;
   color: $clr-light;
 
   h1 {
+    margin-top: $size_48px;
     font-size: $size_48px;
   }
 
@@ -23,16 +24,21 @@
 
   .search {
     display: flex;
-    height: max-content;
+    height: $size_48px;
     margin-top: $size_32px;
 
     input {
       background-color: transparent;
       outline: 1px solid $clr-light;
       border: none;
+      height: $size_48px;
       color: $clr-light;
       padding: $size_4px $size_8px;
       font-size: $size_20px;
+
+      &::placeholder {
+        color: $clr-light-hover;
+      }
     }
 
     button {
@@ -42,12 +48,16 @@
 
       height: $size_48px;
       width: $size_48px;
-      
+
       background-color: transparent;
-      color: $clr-light;
       outline: 1px solid $clr-light;
+
+      color: $clr-light;
       border: none;
       cursor: pointer;
+    }
+
+    @media (max-width: 510px) {
     }
   }
 }
@@ -56,27 +66,34 @@
   display: flex;
   justify-content: center;
   padding: $size_16px;
-  
+  height: fit-content;
 
   background-color: rgba(0, 0, 0, 0.507);
   color: $clr-light;
+  flex: 1 1 auto;
+
+  height: fit-content;
 
   .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    ul {
+      -moz-column-count: 3;
+      -webkit-column-count: 3;
+      column-count: 2;
+      column-rule: none;
+      height: 6050px;
+      width: $size_256px;
 
-    height: 1500px;
-    width: 100%;
-
-    a {
-      width: fit-content;
-    }
-    
-    p {
-      width: fit-content;
-      &:hover {
-        text-decoration: underline;
+      @media (max-width: 510px) {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        min-height: 5000px;
+        max-height: fit-content;
+      }
+      li {
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

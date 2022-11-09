@@ -46,26 +46,29 @@ export default function MonstersPage({ monsters }) {
       </section>
       <section className={styles.container}>
         <div className={styles.content}>
-          {monstersData.length
-            ? monstersData.map((monster) => {
-                return (
-                  <>
-                    <Link href={`/monsters/${monster.index}`}>
-                      <p>{monster.name}</p>
+          <ul>
+            {monstersData.length
+              ? monstersData.map((monster) => {
+                  return (
+                    <Link
+                      href={`/monsters/${monster.index}`}
+                      key={monster.name}
+                    >
+                      <li>{monster.name}</li>
                     </Link>
-                  </>
-                )
-              })
-            : monsters.results.map((monster) => {
-                return (
-                  <>
-                    <Link href={`/monsters/${monster.index}`}>
-                      <p>{monster.name}</p>
+                  )
+                })
+              : monsters.results.map((monster) => {
+                  return (
+                    <Link
+                      href={`/monsters/${monster.index}`}
+                      key={monster.name}
+                    >
+                      <li>{monster.name}</li>
                     </Link>
-                  </>
-                )
-              })
-          }
+                  )
+                })}
+          </ul>
         </div>
       </section>
     </Layout>

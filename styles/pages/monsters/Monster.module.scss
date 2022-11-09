@@ -7,8 +7,8 @@
   align-items: center;
   flex: 0 1 auto;
   margin-block: $size_20px;
+  height: $size_384px;
 
-  min-height: 35vh;
   @include fontFamilyLogo;
   color: $clr-light;
 
@@ -47,6 +47,7 @@
     display: flex;
     gap: $size_48px;
     padding: $size_20px;
+    flex-wrap: wrap;
     height: 100%;
     margin: 0 auto;
 
