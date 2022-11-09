@@ -6,14 +6,16 @@
   justify-content: center;
   align-items: center;
   flex: 0 1 auto;
-  margin-block: $size_20px;
-  height: $size_384px;
+
+  height: $size_256px;
 
   @include fontFamilyLogo;
   color: $clr-light;
 
   h1 {
     font-size: $size_48px;
+    text-align: center;
+
   }
 
   h2 {

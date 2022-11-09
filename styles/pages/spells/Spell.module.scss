@@ -6,14 +6,16 @@
   justify-content: center;
   align-items: center;
   flex: 0 1 auto;
-  margin-block: $size_20px;
+  padding: $size_24px;
+  height: $size_256px;
 
-  min-height: 35vh;
   @include fontFamilyLogo;
   color: $clr-light;
 
   h1 {
     font-size: $size_48px;
+    text-align: center;
+
   }
 
   h2 {
@@ -49,13 +51,15 @@
     padding: $size_20px;
     height: 100%;
     margin: 0 auto;
+    flex-wrap: wrap;
+
 
     .box {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: $size_128px;
+      width: max-content;
       height: fit-content;
 
       padding: $size_16px;

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/spell/Spell.module.scss'
+import styles from '@/styles/pages/spells/Spell.module.scss'
 import { getSpellDetails } from 'services/api-calls'
 
 export default function SpellPage({ spell }) {
@@ -17,7 +17,7 @@ export default function SpellPage({ spell }) {
       <section className={styles.container}>
         <div className={styles.content}>
           <div className={styles.col}>
-            <div className={styles.list}>
+            <div className={styles.box}>
               <h1>Available For</h1>
               {spell.classes.length ? (
                 <>
@@ -33,6 +33,7 @@ export default function SpellPage({ spell }) {
             </div>
           </div>
           <div className={styles.list}>
+            <h1>Description</h1>
             <p>{spell.desc[0]}</p>
           </div>
         </div>

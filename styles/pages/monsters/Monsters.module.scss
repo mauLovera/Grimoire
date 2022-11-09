@@ -8,12 +8,12 @@
   flex: 0 1 auto;
   
 
-  height: $size_384px;
+  height: $size_256px;
   @include fontFamilyLogo;
   color: $clr-light;
+  margin-block: $size_48px;
 
   h1 {
-    margin-top: $size_48px;
     font-size: $size_48px;
   }
 
@@ -79,9 +79,10 @@
       -moz-column-count: 3;
       -webkit-column-count: 3;
       column-count: 2;
-      column-rule: none;
+      column-gap: $size_32px;
       height: 6050px;
-      width: $size_256px;
+      width: 100%;
+      
 
       @media (max-width: 510px) {
         -moz-column-count: 2;
@@ -90,7 +91,11 @@
         min-height: 5000px;
         max-height: fit-content;
       }
+      a {
+        width: fit-content;
+      }
       li {
+        width: fit-content;
         &:hover {
           text-decoration: underline;
         }

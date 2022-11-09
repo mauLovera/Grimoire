@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa'
 
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/monsters/Monsters.module.scss'
+import styles from '@/styles/pages/spells/Spells.module.scss'
 import { getSpellList, getSpellSearch } from 'services/api-calls'
 
 export default function SpellsPage({ spells }) {
@@ -47,26 +47,27 @@ export default function SpellsPage({ spells }) {
       </section>
       <section className={styles.container}>
         <div className={styles.content}>
-        {spellsData.length
-            ? spellsData.map((spell) => {
-                return (
-                  <>
-                    <Link href={`/spells/${spell.index}`}>
-                      <p>{spell.name}</p>
-                    </Link>
-                  </>
-                )
-              })
-            : spells.results.map((spell) => {
-                return (
-                  <>
-                    <Link href={`/spells/${spell.index}`}>
-                      <p>{spell.name}</p>
-                    </Link>
-                  </>
-                )
-              })
-          }
+          <ul>
+            {spellsData.length
+              ? spellsData.map((spell) => {
+                  return (
+                    <>
+                      <Link href={`/spells/${spell.index}`} key={spell.name}>
+                        <li>{spell.name}</li>
+                      </Link>
+                    </>
+                  )
+                })
+              : spells.results.map((spell) => {
+                  return (
+                    <>
+                      <Link href={`/spells/${spell.index}`} key={spell.name}>
+                        <li>{spell.name}</li>
+                      </Link>
+                    </>
+                  )
+                })}
+          </ul>
         </div>
       </section>
     </Layout>
