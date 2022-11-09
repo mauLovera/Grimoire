@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/monsters/Monster.module.scss'
+import styles from '@/styles/pages/spell/Spell.module.scss'
 import { getSpellDetails } from 'services/api-calls'
 
 export default function SpellPage({ spell }) {

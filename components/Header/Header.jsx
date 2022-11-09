@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 import styles from './Header.module.scss'
 
@@ -18,9 +19,7 @@ export default function Header() {
           <li>
             <Link
               href="/classes"
-              className={
-                router.pathname === '/classes' ? styles.active : ''
-              }
+              className={router.pathname === '/classes' ? styles.active : ''}
             >
               Classes
             </Link>
@@ -28,9 +27,7 @@ export default function Header() {
           <li>
             <Link
               href="/monsters"
-              className={
-                router.pathname === '/monsters' ? styles.active : ''
-              }
+              className={router.pathname === '/monsters' ? styles.active : ''}
             >
               Monsters
             </Link>
@@ -38,9 +35,7 @@ export default function Header() {
           <li>
             <Link
               href="/spells"
-              className={
-                router.pathname === '/spells' ? styles.active : ''
-              }
+              className={router.pathname === '/spells' ? styles.active : ''}
             >
               Spells
             </Link>
