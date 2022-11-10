@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import Layout from '@/components/Layout/Layout'
-
-import styles from '@/styles/pages/classes/Classes.module.scss'
-import { getClassList } from 'services/api-calls'
 import Banner from '@/components/Banner/Banner'
+
+import { getClassList } from 'services/api-calls'
+import styles from '@/styles/pages/classes/Classes.module.scss'
 
 export default function ClassesPage({ classes }) {
   return (
