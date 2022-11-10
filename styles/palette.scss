@@ -1,7 +1,11 @@
+//* ======= Functions ======= //
+
 @function toRem($value) {
   $rem: ($value / 16) + rem;
   @return $rem;
 }
+
+//* ======= Sizing ======= //
 
 $size_4px: toRem(4);
 $size_8px: toRem(8);
@@ -24,6 +28,8 @@ $size_640px: toRem(640);
 $size_768px: toRem(768);
 $size_960px: toRem(960);
 
+//* ======= Palette ======= //
+
 $clr-red1: #e8443c;
 $clr-red2: #e94445;
 $clr-green: #264c5e;
@@ -31,6 +37,8 @@ $clr-orange: #a34c50;
 $clr-light: #e7e7db;
 $clr-light-hover: #e7e7db91;
 $clr-dark: #4a2932;
+
+//* ======= Fonts ======= //
 
 @mixin ff-primary {
   font-family: 'Righteous', sans-serif;

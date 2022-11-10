@@ -1,0 +1,27 @@
+@import '~styles/palette.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: $size_384px;
+  padding: $size_24px;
+  flex: 0 1 auto;
+
+  @include ff-primary;
+  color: $clr-light;
+
+  h1 {
+    text-align: center;
+    font-size: $size_48px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: $size_20px;
+    
+    @include ff-secondary;
+  }
+}

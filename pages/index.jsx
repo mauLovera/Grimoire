@@ -1,16 +1,17 @@
 import Link from 'next/link'
 
 import Layout from '@/components/Layout/Layout'
+import Banner from '@/components/Banner/Banner'
 
 import styles from '@/styles/pages/Home.module.scss'
 
 export default function Home() {
   return (
     <Layout>
-      <section className={styles.welcome}>
-        <h1>Welcome to Grimoire!</h1>
-        <h2>What are you looking for?</h2>
-      </section>
+      <Banner
+        header={'Welcome to Grimoire!'}
+        subHeader={'What are you looking for?'}
+      />
       <section className={styles.content}>
         <div className={styles.boxContainer}>
           <h3>Classes</h3>

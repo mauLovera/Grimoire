@@ -1,29 +1,5 @@
 @import '~styles/palette.scss';
 
-.welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 0 1 auto;
-
-  height: $size_384px;
-  @include ff-primary;
-  color: $clr-light;
-  padding: $size_24px;
-
-  h1 {
-    text-align: center;
-    font-size: $size_48px;
-  }
-
-  h2 {
-    text-align: center;
-    @include ff-secondary;
-    font-size: $size_20px;
-  }
-}
-
 .content {
   display: flex;
   justify-content: center;
