@@ -5,7 +5,7 @@ https://vercel.com/maulovera/next-grimoire/FY35yRBtAszg742uKnH2VQBPC2nR
 
 ## **Description** 📃
 
-Grimoire is a **DnD 5th Edition API** front-end application which allows users to look and search within the DnD 5th Edition API!
+Grimoire is a **DnD 5th Edition** front-end application which allows users to look and search within the DnD 5th Edition API!
 
 ## **Icebox** 🧊
 
