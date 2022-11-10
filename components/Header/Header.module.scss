@@ -1,6 +1,7 @@
 @import '~styles/palette.scss';
 
 .container {
+  position: absolute;
   width: 100%;
   height: $size_64px;
   

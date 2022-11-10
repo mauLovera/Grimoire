@@ -1,26 +1,29 @@
 @import '~styles/palette.scss';
 
-.content {
+.container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
+
+  width: 100%;
   flex: 1 1 auto;
 
-  height: 0px;
-  width: 100%;
-
-  background-color: rgba(0, 0, 0, 0.507);
+  background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
 
-  .boxContainer {
+  .box {
     display: flex;
     flex-direction: column;
-    gap: $size_18px;
-    height: 100%;
-    width: 33.3%;
-    padding: $size_24px;
+    
 
-    border-right: 1px solid $clr-light;
+    width: 33.3%;
+    padding-top: $size_24px;
+    padding-inline: $size_24px;
+    padding-bottom: $size_48px;
+
+    gap: $size_18px;
+
+    border-right: 1px solid $clr-light-hover;
     &:last-child {
       border: unset;
     }
@@ -36,15 +39,18 @@
 
     a {
       margin-top: $size_12px;
-      width: fit-content;
+      width: max-content;
+
       button {
-        background-color: $clr-light;
-        padding: $size_8px $size_24px;
-        border: 2px solid $clr-light;
-        color: $clr-dark;
-        font-size: $size_16px;
         @include ff-secondary;
         cursor: pointer;
+        font-size: $size_16px;
+
+        border: 2px solid $clr-light;
+        padding: $size_8px $size_24px;
+
+        background-color: $clr-light;
+        color: $clr-dark;
       }
     }
   }
@@ -53,10 +59,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: $size_48px;
-    height: fit-content;
 
-    .boxContainer {
+    height: fit-content;
+    padding-bottom: $size_48px;
+
+    .box {
       margin: 0 auto;
       width: fit-content;
       border: unset;

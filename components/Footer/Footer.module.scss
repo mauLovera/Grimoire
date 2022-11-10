@@ -1,0 +1,57 @@
+@import '~styles/palette.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding-block: $size_48px;
+  
+  border-top: 1px solid $clr-light;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $clr-light;
+  
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $size_128px;
+    width: 1200px;
+
+    .logo {
+      @include ff-primary;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      @include ff-secondary;
+      gap: $size_24px;
+
+      .header {
+        font-size: $size_12px;
+        text-transform: uppercase;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: $size_12px;
+        line-height: 1.25
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: $size_4px;
+        font-size: $size_12px;
+        width: fit-content;
+        &:hover {
+          color: $clr-light-hover;
+        }
+      }
+    }
+  }
+}

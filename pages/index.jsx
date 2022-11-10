@@ -2,18 +2,17 @@ import Link from 'next/link'
 
 import Layout from '@/components/Layout/Layout'
 import Banner from '@/components/Banner/Banner'
-
 import styles from '@/styles/pages/Home.module.scss'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Layout>
       <Banner
         header={'Welcome to Grimoire!'}
         subHeader={'What are you looking for?'}
       />
-      <section className={styles.content}>
-        <div className={styles.boxContainer}>
+      <section className={styles.container}>
+        <div className={styles.box}>
           <h3>Classes</h3>
           <p>
             Class is the primary definition of what your character can do. It’s
@@ -25,7 +24,7 @@ export default function Home() {
             <button>See More</button>
           </Link>
         </div>
-        <div className={styles.boxContainer}>
+        <div className={styles.box}>
           <h3>Monsters</h3>
           <p>
             Having various sizes, strengths, and weaknesses, a monster is the
@@ -38,16 +37,13 @@ export default function Home() {
             <button>See More</button>
           </Link>
         </div>
-        <div className={styles.boxContainer}>
+        <div className={styles.box}>
           <h3>Spells</h3>
           <p>
             A spell is a discrete magical effect, a single shaping of the
             magical energies that suffuse the multiverse into a specific,
             limited expression. In casting a spell, a character carefully plucks
-            at the invisible strands of Raw Magic suffusing the world, pins them
-            in place in a particular pattern, sets them vibrating in a specific
-            way, and then releases them to unleash the desired effect—in most
-            cases, all in the span of seconds.
+            at the invisible strands of Raw Magic suffusing the world and then releases them to unleash the desired effect.
           </p>
           <Link href="/spells">
             <button>See More</button>
