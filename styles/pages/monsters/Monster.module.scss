@@ -9,7 +9,7 @@
 
   height: $size_256px;
 
-  @include fontFamilyLogo;
+  @include ff-primary;
   color: $clr-light;
 
   h1 {
@@ -19,7 +19,7 @@
   }
 
   h2 {
-    @include fontFamilyLinks;
+    @include ff-secondary;
     font-size: $size_20px;
     span {
       text-transform: capitalize;
@@ -72,7 +72,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include fontFamilyLinks;
+        @include ff-secondary;
         text-decoration: underline;
       }
 
@@ -89,7 +89,7 @@
       max-width: 40rem;
 
       h1 {
-        @include fontFamilyLinks;
+        @include ff-secondary;
       }
     }
   }

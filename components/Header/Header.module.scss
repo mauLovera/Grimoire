@@ -1,7 +1,6 @@
 @import '~styles/palette.scss';
 
 .container {
-  
   width: 100%;
   height: $size_64px;
   
@@ -20,7 +19,7 @@
   .logo {
     font-size: $size_20px;
     color: $clr-light;
-    @include fontFamilyLogo;
+    @include ff-primary;
   }
 
   nav {
@@ -28,7 +27,7 @@
     top: 2px;
 
     font-weight: 500;
-    @include fontFamilyLinks;
+    @include ff-secondary;
     padding-left: $size_32px;
 
     ul {

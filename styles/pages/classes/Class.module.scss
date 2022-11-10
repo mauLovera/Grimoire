@@ -10,7 +10,7 @@
 
   height: $size_256px;
   padding: $size_24px;
-  @include fontFamilyLogo;
+  @include ff-primary;
   color: $clr-light;
 
   h1 {
@@ -18,7 +18,7 @@
   }
 
   h2 {
-    @include fontFamilyLinks;
+    @include ff-secondary;
     font-size: $size_20px;
   }
 
@@ -66,7 +66,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include fontFamilyLinks;
+        @include ff-secondary;
       }
 
       p {
@@ -83,7 +83,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include fontFamilyLinks;
+        @include ff-secondary;
       }
 
       div {
@@ -97,7 +97,7 @@
           padding: $size_12px;
           background-color: black;
           outline: 2px solid $clr-light;
-          @include fontFamilyLinks
+          @include ff-secondary;
         }
       }
     }
@@ -110,7 +110,7 @@
       overflow: hidden;
 
       h1 {
-        @include fontFamilyLinks;
+        @include ff-secondary;
       }
     }
   }

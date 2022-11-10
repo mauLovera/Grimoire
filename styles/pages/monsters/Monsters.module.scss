@@ -9,7 +9,7 @@
   
 
   height: $size_256px;
-  @include fontFamilyLogo;
+  @include ff-primary;
   color: $clr-light;
   margin-block: $size_48px;
 
@@ -18,7 +18,7 @@
   }
 
   h2 {
-    @include fontFamilyLinks;
+    @include ff-secondary;
     font-size: $size_20px;
   }
 

@@ -8,10 +8,9 @@
   flex: 0 1 auto;
 
   height: $size_384px;
-  @include fontFamilyLogo;
+  @include ff-primary;
   color: $clr-light;
   padding: $size_24px;
-
 
   h1 {
     text-align: center;
@@ -20,7 +19,7 @@
 
   h2 {
     text-align: center;
-    @include fontFamilyLinks;
+    @include ff-secondary;
     font-size: $size_20px;
   }
 }
@@ -51,7 +50,7 @@
     }
 
     h3 {
-      @include fontFamilyLinks;
+      @include ff-secondary;
       font-size: $size_32px;
     }
 
@@ -68,7 +67,7 @@
         border: 2px solid $clr-light;
         color: $clr-dark;
         font-size: $size_16px;
-        @include fontFamilyLinks;
+        @include ff-secondary;
         cursor: pointer;
       }
     }
