@@ -6,12 +6,6 @@ https://vercel.com/maulovera/next-grimoire/FY35yRBtAszg742uKnH2VQBPC2nR
 ## **Description** 📃
 
 Grimoire is a **DnD 5th Edition API** front-end application which allows users to look and search within the DnD 5th Edition API!
- 
-## **Features** 
-
-- Monster and spell search bar.
-- Content-aware color rendering through [Vibrant.js](https://github.com/Vibrant-Colors/node-vibrant)
-
 
 ## **Icebox** 🧊
 
