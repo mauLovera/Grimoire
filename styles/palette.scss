@@ -53,3 +53,7 @@ $clr-dark: #4a2932;
 @mixin ff-body {
   font-family: 'Nunito', sans-serif;
 }
+
+@mixin transition {
+  transition: .5s;
+}

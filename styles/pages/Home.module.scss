@@ -6,7 +6,6 @@
   align-items: stretch;
 
   width: 100%;
-  flex: 1 1 auto;
 
   background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
@@ -14,13 +13,14 @@
   .box {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: $size_18px;
 
     width: 33.3%;
+
     padding-top: $size_24px;
     padding-inline: $size_24px;
     padding-bottom: $size_48px;
-
-    gap: $size_18px;
 
     border-right: 1px solid $clr-light-hover;
     &:last-child {
@@ -43,14 +43,20 @@
 
       button {
         @include ff-secondary;
+        @include transition;
         cursor: pointer;
         font-size: $size_16px;
 
-        border: 2px solid $clr-light;
+        border: 1px solid $clr-light;
         padding: $size_8px $size_24px;
 
         background-color: $clr-light;
         color: $clr-dark;
+
+        &:hover {
+          background-color: transparent;
+          color: $clr-light;
+        }
       }
     }
   }

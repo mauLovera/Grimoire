@@ -31,7 +31,7 @@ export default function HomePage() {
           <h3>Monsters</h3>
           <p>
             Having various sizes, strengths, and weaknesses, a monster is the
-            most common adversary your characters will face in the world.
+            most common adversary your character will face in the world.
           </p>
           <p>
             Knowing their skills, type, speed, saving throws, and hit points are

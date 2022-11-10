@@ -37,6 +37,7 @@
       color: $clr-light;
 
       a {
+        @include transition;
         &:hover {
           color: $clr-light-hover;
         }
