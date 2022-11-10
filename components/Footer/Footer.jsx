@@ -1,6 +1,7 @@
 import Link from 'next/link'
-
 import { FaGithub } from 'react-icons/fa'
+
+import ActiveLink from '@/components/ActiveLink/ActiveLink'
 import styles from './Footer.module.scss'
 
 export default function Footer() {
@@ -14,13 +15,13 @@ export default function Footer() {
           <h4 className={styles.header}>Links</h4>
           <ul>
             <li>
-              <Link href={'/classes'}>Classes</Link>
+              <ActiveLink url={'classes'} text={'Classes'} />
             </li>
             <li>
-              <Link href={'/monsters'}>Monsters</Link>
+              <ActiveLink url={'monsters'} text={'Monsters'} />
             </li>
             <li>
-              <Link href={'/spells'}>Spells</Link>
+              <ActiveLink url={'spells'} text={'Spells'} />
             </li>
           </ul>
         </nav>
