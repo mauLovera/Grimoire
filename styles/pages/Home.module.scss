@@ -14,7 +14,6 @@
   .box {
     display: flex;
     flex-direction: column;
-    
 
     width: 33.3%;
     padding-top: $size_24px;
@@ -35,6 +34,7 @@
 
     p {
       max-width: 20rem;
+      line-height: 1.55;
     }
 
     a {
@@ -60,7 +60,6 @@
     justify-content: flex-start;
     align-items: center;
 
-    height: fit-content;
     padding-bottom: $size_48px;
 
     .box {

@@ -5,7 +5,9 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  padding-block: $size_48px;
+  padding-top: $size_48px;
+  padding-bottom: $size_64px;
+  padding-inline: $size_24px;
   
   border-top: 1px solid $clr-light;
   background-color: rgba(0, 0, 0, 0.5);
@@ -21,6 +23,7 @@
 
     .logo {
       @include ff-primary;
+      font-size: $size_32px;
     }
 
     nav {
@@ -31,8 +34,9 @@
       gap: $size_24px;
 
       .header {
-        font-size: $size_12px;
+        font-size: $size_16px;
         text-transform: uppercase;
+        color: $clr-light-hover;
       }
 
       ul {
@@ -46,10 +50,36 @@
         display: flex;
         align-items: center;
         gap: $size_4px;
-        font-size: $size_12px;
+        font-size: $size_14px;
         width: fit-content;
         &:hover {
-          color: $clr-light-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .content {
+      max-width: fit-content;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .content {
+      flex-direction: column;
+      gap: $size_32px;
+      
+      nav {
+        width: 100%;
+        align-items: center;
+        
+        .header {
+          font-size: $size_16px;
+        }
+
+        ul {
+          align-items: center;
         }
       }
     }

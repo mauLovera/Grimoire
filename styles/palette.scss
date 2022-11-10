@@ -10,6 +10,7 @@
 $size_4px: toRem(4);
 $size_8px: toRem(8);
 $size_12px: toRem(12);
+$size_14px: toRem(14);
 $size_16px: toRem(16);
 $size_18px: toRem(18);
 $size_20px: toRem(20);
@@ -47,4 +48,8 @@ $clr-dark: #4a2932;
 
 @mixin ff-secondary {
   font-family: 'Reem Kufi', sans-serif;
+}
+
+@mixin ff-body {
+  font-family: 'Nunito', sans-serif;
 }

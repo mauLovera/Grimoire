@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Reem+Kufi:wght@400;500;600;700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Raleway&family=Reem+Kufi:wght@400;500;600;700&family=Righteous&display=swap');
 
 @import '~styles/palette.scss';
 
@@ -13,6 +13,8 @@ body {
   background-repeat: no-repeat;
   background-color: black;
   min-height: 100vh;
+
+  @include ff-body;
   
   &::-webkit-scrollbar {
     width: 6px;
