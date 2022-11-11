@@ -5,7 +5,13 @@ import Footer from '@/components/Footer/Footer'
 
 import styles from './Layout.module.scss'
 
-export default function Layout({ children, title, keywords, description }) {
+export default function Layout({
+  children,
+  title,
+  keywords,
+  description,
+  fit,
+}) {
   return (
     <>
       <Head>
@@ -14,7 +20,9 @@ export default function Layout({ children, title, keywords, description }) {
         <meta name="keywords" content={keywords} />
       </Head>
       <Header />
-      <main className={styles.container}>{children}</main>
+      <main className={fit ? styles.fitContainer : styles.container}>
+        {children}
+      </main>
       <Footer />
     </>
   )

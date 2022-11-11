@@ -6,9 +6,8 @@
   justify-content: center;
   align-items: center;
 
-  height: $size_420px;
   padding: $size_24px;
-  flex: 0 1 auto;
+  flex: 0 1  $size_420px;
 
   @include ff-primary;
   color: $clr-light;

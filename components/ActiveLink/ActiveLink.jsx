@@ -7,7 +7,7 @@ export default function ActiveLink({ text, url }) {
   const router = useRouter()
   return (
     <Link
-      href={url}
+      href={`/${url}`}
       className={router.pathname === `/${url}` ? styles.active : ''}
     >
       {text}
