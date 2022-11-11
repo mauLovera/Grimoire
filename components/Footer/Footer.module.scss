@@ -47,13 +47,23 @@
       }
 
       a {
+        
         display: flex;
         align-items: center;
         gap: $size_4px;
-        font-size: $size_14px;
+        
         width: fit-content;
+        
+        font-size: $size_14px;
+        
+        @include transition;
+        transition-property: text-decoration-color;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        
         &:hover {
           text-decoration: underline;
+          text-decoration-color: $clr-light;
         }
       }
     }

@@ -7,7 +7,7 @@ import { getMonsterDetails } from 'services/api-calls'
 
 export default function MonsterPage({ monster }) {
   return (
-    <Layout>
+    <Layout fit>
       <section className={styles.banner}>
         <h1>{monster.name}</h1>
         <h2>
