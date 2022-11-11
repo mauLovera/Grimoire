@@ -10,7 +10,7 @@
   padding: $size_24px;
   margin-block: $size_48px;
 
-  @include fontFamilyLogo;
+  @include ff-primary;
   color: $clr-light;
 
   h1 {
@@ -18,7 +18,7 @@
   }
 
   h2 {
-    @include fontFamilyLinks;
+    @include ff-secondary;
     font-size: $size_20px;
   }
 
@@ -58,6 +58,7 @@
   justify-content: center;
   padding: $size_16px;
 
+  border-top: 1px solid $clr-light;
   background-color: rgba(0, 0, 0, 0.507);
   color: $clr-light;
 

@@ -27,7 +27,7 @@ export default function SpellsPage({ spells }) {
   }
 
   return (
-    <Layout>
+    <Layout fit>
       <section className={styles.banner}>
         <h1>Spells</h1>
         <h2>What do they do?</h2>

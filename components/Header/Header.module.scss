@@ -1,26 +1,27 @@
 @import '~styles/palette.scss';
 
 .container {
-  
-  width: 100%;
-  height: $size_64px;
+  position: absolute;
   
   display: flex;
   align-items: center;
+  gap: $size_24px;
+
+  height: $size_64px;
+  width: 100%;
 
   padding-inline: $size_16px;
   background-color: transparent;
-
+  
+  // background-color: rgba(0, 0, 0, 0.5);
   // box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
   // -webkit-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
   // -moz-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
 
-  z-index: 10;
-
   .logo {
+    @include ff-primary;
     font-size: $size_20px;
     color: $clr-light;
-    @include fontFamilyLogo;
   }
 
   nav {
@@ -28,8 +29,7 @@
     top: 2px;
 
     font-weight: 500;
-    @include fontFamilyLinks;
-    padding-left: $size_32px;
+    @include ff-secondary;
 
     ul {
       display: flex;
@@ -37,6 +37,7 @@
       color: $clr-light;
 
       a {
+        @include transition;
         &:hover {
           color: $clr-light-hover;
         }
@@ -46,10 +47,7 @@
   @media (max-width: 510px) {
     height: max-content;
     flex-direction: column;
-
-    nav {
-      padding: unset;
-    }
+    gap: unset;
   }
 }
 

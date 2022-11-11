@@ -9,7 +9,7 @@
   
 
   height: $size_256px;
-  @include fontFamilyLogo;
+  @include ff-primary;
   color: $clr-light;
   margin-block: $size_48px;
 
@@ -18,7 +18,7 @@
   }
 
   h2 {
-    @include fontFamilyLinks;
+    @include ff-secondary;
     font-size: $size_20px;
   }
 
@@ -68,11 +68,10 @@
   padding: $size_16px;
   height: fit-content;
 
+  border-top: 1px solid $clr-light;
   background-color: rgba(0, 0, 0, 0.507);
   color: $clr-light;
   flex: 1 1 auto;
-
-  height: fit-content;
 
   .content {
     ul {
@@ -80,7 +79,7 @@
       -webkit-column-count: 3;
       column-count: 2;
       column-gap: $size_32px;
-      height: 6050px;
+      height: fit-content;
       width: 100%;
       
 

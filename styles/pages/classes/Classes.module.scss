@@ -1,49 +1,27 @@
 @import '~styles/palette.scss';
 
-.banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 0 1 auto;
-
-  height: $size_256px;
-  padding: $size_24px;
-
-  @include fontFamilyLogo;
-  color: $clr-light;
-
-  h1 {
-    font-size: $size_48px;
-  }
-
-  h2 {
-    @include fontFamilyLinks;
-    font-size: $size_20px;
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex: 1 1 auto;
-  padding: $size_4px;
 
-  height: 40vh;
   width: 100%;
 
-  background-color: rgba(0, 0, 0, 0.507);
+  border-top: 1px solid $clr-light;
+  background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
 
   .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 
     margin: 0 auto;
+    padding-inline: $size_24px;
+    padding-block: $size_32px;
     width: $size_960px;
-    height: 100%;
 
     .row {
       display: flex;
@@ -52,40 +30,80 @@
       gap: $size_8px;
       height: fit-content;
       flex: 1 1 33%;
-      height: 25%;
-      @include fontFamilyLinks;
+      @include ff-secondary;
+      @include transition;
+      transition-property: background-color, color, gap;
 
       // Borders
-      border-top: 1px solid $clr-light;
-      border-right: 1px solid $clr-light;
+      border-top: 1px solid $clr-light-hover;
+      border-right: 1px solid $clr-light-hover;
       &:nth-child(1) {
-        border-left: 1px solid $clr-light;
+        border-left: 1px solid $clr-light-hover;
       }
-      &:nth-child(4) {
-        border-left: 1px solid $clr-light;
+      &:nth-child(2) {
+        border-left: 1px solid $clr-light-hover;
       }
-      &:nth-child(7) {
-        border-left: 1px solid $clr-light;
+      &:nth-child(3) {
+        border-left: 1px solid $clr-light-hover;
+        border-bottom: 1px solid $clr-light-hover;
       }
-      &:nth-child(10) {
-        border-left: 1px solid $clr-light;
+      &:nth-child(6) {
+        border-bottom: 1px solid $clr-light-hover;
       }
-      &:nth-last-child(-n + 3) {
-        border-bottom: 1px solid $clr-light;
+      &:nth-child(9) {
+        border-bottom: 1px solid $clr-light-hover;
+      }
+      &:nth-child(12) {
+        border-bottom: 1px solid $clr-light-hover;
       }
 
       .image {
+        @include transition;
         filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
           brightness(93%) contrast(97%);
       }
 
-      p {
-        font-size: $size_16px;
+      @media (max-width: 710px) {
+        flex-direction: column;
+        flex: 1 1 25%;
+        gap: 0;
+
+        &:nth-child(1) {
+          border-left: 1px solid $clr-light-hover;
+        }
+        &:nth-child(2) {
+          border-left: 1px solid $clr-light-hover;
+        }
+        &:nth-child(3) {
+          border-left: 1px solid $clr-light-hover;
+          border-bottom: unset;
+        }
+        &:nth-child(4) {
+          border-left: 1px solid $clr-light-hover;
+          border-bottom: 1px solid $clr-light-hover;
+        }
+        &:nth-child(6) {
+          border-bottom: unset;
+        }
+        &:nth-child(8) {
+          border-bottom: 1px solid $clr-light-hover;
+        }
+        &:nth-child(9) {
+          border-bottom: unset;
+        }
+        &:nth-child(12) {
+          border-bottom: 1px solid $clr-light-hover;
+        }
       }
 
-      @media (max-width: 510px) {
-        flex-direction: column;
-        gap: 0;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $clr-light;
+          color: black;
+          .image {
+            filter: unset;
+          }
+        }
       }
     }
   }

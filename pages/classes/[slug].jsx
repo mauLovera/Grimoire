@@ -1,14 +1,12 @@
 import Image from 'next/image'
 
 import Layout from '@/components/Layout/Layout'
-
 import styles from '@/styles/pages/classes/Class.module.scss'
-import { getClassDetails, getClassList } from 'services/api-calls'
+import { getClassDetails } from 'services/api-calls'
 
 export default function ClassPage({ clss }) {
-  console.log(clss)
   return (
-    <Layout>
+    <Layout fit>
       <section className={styles.banner}>
         <h1>{clss.name}</h1>
         <Image

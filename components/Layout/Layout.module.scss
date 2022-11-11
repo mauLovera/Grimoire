@@ -1,5 +1,16 @@
 .container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+
+  @media (max-width: 1024px) {
+    height: fit-content;
+  }
+}
+
+.fitContainer {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
   min-height: 100vh;
 }

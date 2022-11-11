@@ -1,75 +1,64 @@
 @import '~styles/palette.scss';
 
-.welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 0 1 auto;
-
-  height: $size_384px;
-  @include fontFamilyLogo;
-  color: $clr-light;
-  padding: $size_24px;
-
-
-  h1 {
-    text-align: center;
-    font-size: $size_48px;
-  }
-
-  h2 {
-    text-align: center;
-    @include fontFamilyLinks;
-    font-size: $size_20px;
-  }
-}
-
-.content {
+.container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   flex: 1 1 auto;
-
-  height: 0px;
+  
   width: 100%;
 
-  background-color: rgba(0, 0, 0, 0.507);
+  border-top: 1px solid $clr-light;
+  background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
 
-  .boxContainer {
+  .box {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: $size_18px;
-    height: 100%;
-    width: 33.3%;
-    padding: $size_24px;
 
-    border-right: 1px solid $clr-light;
+    width: 33.3%;
+
+    padding-top: $size_24px;
+    padding-inline: $size_24px;
+    padding-bottom: $size_48px;
+
+    border-right: 1px solid $clr-light-hover;
     &:last-child {
       border: unset;
     }
 
     h3 {
-      @include fontFamilyLinks;
+      @include ff-secondary;
       font-size: $size_32px;
     }
 
     p {
       max-width: 20rem;
+      line-height: 1.55;
     }
 
     a {
       margin-top: $size_12px;
-      width: fit-content;
+      width: max-content;
+
       button {
-        background-color: $clr-light;
-        padding: $size_8px $size_24px;
-        border: 2px solid $clr-light;
-        color: $clr-dark;
-        font-size: $size_16px;
-        @include fontFamilyLinks;
+        @include ff-secondary;
+        @include transition;
         cursor: pointer;
+        font-size: $size_16px;
+
+        border: 1px solid $clr-light;
+        padding: $size_8px $size_24px;
+
+        background-color: $clr-light;
+        color: $clr-dark;
+
+        &:hover {
+          background-color: transparent;
+          color: $clr-light;
+        }
       }
     }
   }
@@ -78,10 +67,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: $size_48px;
-    height: fit-content;
 
-    .boxContainer {
+    padding-bottom: $size_48px;
+
+    .box {
       margin: 0 auto;
       width: fit-content;
       border: unset;

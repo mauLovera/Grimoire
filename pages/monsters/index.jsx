@@ -26,7 +26,7 @@ export default function MonstersPage({ monsters }) {
   }
 
   return (
-    <Layout>
+    <Layout fit>
       <section className={styles.banner}>
         <h1>Monsters</h1>
         <h2>What are they?</h2>

@@ -1,26 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Reem+Kufi:wght@400;500;600;700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Raleway&family=Reem+Kufi:wght@400;500;600;700&family=Righteous&display=swap');
 
 @import '~styles/palette.scss';
 
 body {
-  background-color: $clr-light;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.582) 100%, rgba(0,0,0,0) 100%), url('/fantasy.jpg');
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.582) 100%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url('/fantasy.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-color: black;
   min-height: 100vh;
+
+  @include ff-body;
   
-}
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
 
-body::-webkit-scrollbar {
-  width: 6px;               /* width of the entire scrollbar */
-}
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
 
-body::-webkit-scrollbar-track {
-  background: black;        /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: $clr-light;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
+  &::-webkit-scrollbar-thumb {
+    background-color: $clr-light;
+    border-radius: 20px;
+  }
 }

@@ -7,7 +7,7 @@ import { getSpellDetails } from 'services/api-calls'
 
 export default function SpellPage({ spell }) {
   return (
-    <Layout>
+    <Layout fit>
       <section className={styles.banner}>
         <h1>{spell.name}</h1>
         <h2>
