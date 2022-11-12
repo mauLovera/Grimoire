@@ -5,10 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 0 1 auto;
-  height: $size_256px;
+  flex: 0 1 $size_420px;
+
   padding: $size_24px;
-  margin-block: $size_48px;
 
   @include ff-primary;
   color: $clr-light;
@@ -56,31 +55,77 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: $size_16px;
+  height: fit-content;
+  flex: 1 1 auto;
 
+  padding-inline: $size_24px;
+  padding-block: $size_32px;
   border-top: 1px solid $clr-light;
+
   background-color: rgba(0, 0, 0, 0.507);
   color: $clr-light;
 
   .content {
-    ul {
-      -moz-column-count: 3;
-      -webkit-column-count: 3;
-      column-count: 2;
-      column-rule: none;
-      height: 6050px;
-      width: 100%;
+    width: $size_960px;
+    padding-inline: $size_24px;
 
-      @media (max-width: 510px) {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-        min-height: 4000px;
-        max-height: fit-content;
-      }
-      li {
+    margin: 0 auto;
+
+    ul {
+      counter-reset: number;
+      a {
+        display: flex;
+        align-items: center;
+
+        padding-block: $size_12px;
+        padding-inline: $size_12px;
+
+        @include transition;
+
+        border-top: 0.5px solid $clr-light-hover;
+        border-bottom: 0.5px solid $clr-light-hover;
+
+        &:first-child {
+          border-top: 1.5px solid $clr-light-hover;
+        }
+        &:last-child {
+          border-bottom: 1.5px solid $clr-light-hover;
+        }
+
         &:hover {
-          text-decoration: underline;
+          background-color: $clr-dark-hover;
+
+          span {
+            background-color: $clr-light;
+            opacity: 0.9;
+            color: black;
+          }
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: $size_12px;
+
+          span {
+            @include transition;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $size_32px;
+
+            @include ff-secondary;
+            aspect-ratio: 1 / 1;
+
+            outline: 1px solid $clr-light-hover;
+            font-size: $size_14px;
+            color: $clr-light-hover;
+            &::after {
+              counter-increment: number;
+              content: counter(number);
+            }
+          }
         }
       }
     }

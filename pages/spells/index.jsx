@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import { FaSearch } from 'react-icons/fa'
+import { useState } from 'react'
 
 import Layout from '@/components/Layout/Layout'
 
-import styles from '@/styles/pages/spells/Spells.module.scss'
+import { FaSearch } from 'react-icons/fa'
 import { getSpellList, getSpellSearch } from 'services/api-calls'
+import styles from '@/styles/pages/spells/Spells.module.scss'
 
 export default function SpellsPage({ spells }) {
   const [formData, setFormData] = useState({ query: '' })
@@ -51,20 +50,22 @@ export default function SpellsPage({ spells }) {
             {spellsData.length
               ? spellsData.map((spell) => {
                   return (
-                    <>
-                      <Link href={`/spells/${spell.index}`} key={spell.name}>
-                        <li>{spell.name}</li>
-                      </Link>
-                    </>
+                    <Link href={`/spells/${spell.index}`} key={spell.name}>
+                      <li>
+                        <span></span>
+                        {spell.name}
+                      </li>
+                    </Link>
                   )
                 })
               : spells.results.map((spell) => {
                   return (
-                    <>
-                      <Link href={`/spells/${spell.index}`} key={spell.name}>
-                        <li>{spell.name}</li>
-                      </Link>
-                    </>
+                    <Link href={`/spells/${spell.index}`} key={spell.name}>
+                      <li>
+                        <span></span>
+                        {spell.name}
+                      </li>
+                    </Link>
                   )
                 })}
           </ul>

@@ -15,13 +15,14 @@ export default function HomePage() {
         <div className={styles.box}>
           <h3>Classes</h3>
           <p>
-            Class is the primary definition of what your character can do. It’s
-            more than a profession; it’s your character’s calling.
+            Class is the primary definition of what your character can do. It
+            {"'"}s more than a profession; it{"'"}s your character{"'"}s
+            calling.
           </p>
           <p>
             Class shapes the way you think about the world and interact with it
             and your relationship with other people and powers in the
-            multiverse.{' '}
+            multiverse.
           </p>
           <Link href="/classes">
             <button>See More</button>

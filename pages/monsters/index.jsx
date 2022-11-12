@@ -5,11 +5,17 @@ import { FaSearch } from 'react-icons/fa'
 import Layout from '@/components/Layout/Layout'
 
 import styles from '@/styles/pages/monsters/Monsters.module.scss'
-import { getMonsterList, getMonsterSearch } from 'services/api-calls'
+import {
+  getMonsterDetails,
+  getMonsterList,
+  getMonsterListDetails,
+  getMonsterSearch,
+} from 'services/api-calls'
 
 export default function MonstersPage({ monsters }) {
   const [formData, setFormData] = useState({ query: '' })
   const [monstersData, setMonstersData] = useState([])
+  const [monstersDetails, setMonstersDetails] = useState([])
 
   const handleSearch = async (input) => {
     const res = await getMonsterSearch(input)
@@ -54,7 +60,10 @@ export default function MonstersPage({ monsters }) {
                       href={`/monsters/${monster.index}`}
                       key={monster.name}
                     >
-                      <li>{monster.name}</li>
+                      <li>
+                        <span></span>
+                        {monster.name}
+                      </li>
                     </Link>
                   )
                 })
@@ -64,7 +73,10 @@ export default function MonstersPage({ monsters }) {
                       href={`/monsters/${monster.index}`}
                       key={monster.name}
                     >
-                      <li>{monster.name}</li>
+                      <li>
+                        <span></span>
+                        {monster.name}
+                      </li>
                     </Link>
                   )
                 })}

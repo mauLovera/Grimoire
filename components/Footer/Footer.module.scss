@@ -8,17 +8,18 @@
   padding-top: $size_48px;
   padding-bottom: $size_64px;
   padding-inline: $size_24px;
-  
+
   border-top: 1px solid $clr-light;
   background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
-  
+
   .content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     gap: $size_128px;
+    padding-inline: $size_24px;
     width: 1200px;
 
     .logo {
@@ -43,24 +44,23 @@
         display: flex;
         flex-direction: column;
         gap: $size_12px;
-        line-height: 1.25
+        line-height: 1.25;
       }
 
       a {
-        
         display: flex;
         align-items: center;
         gap: $size_4px;
-        
+
         width: fit-content;
-        
+
         font-size: $size_14px;
-        
+
         @include transition;
         transition-property: text-decoration-color;
         text-decoration: underline;
         text-decoration-color: transparent;
-        
+
         &:hover {
           text-decoration: underline;
           text-decoration-color: $clr-light;
@@ -79,11 +79,11 @@
     .content {
       flex-direction: column;
       gap: $size_32px;
-      
+
       nav {
         width: 100%;
         align-items: center;
-        
+
         .header {
           font-size: $size_16px;
         }
