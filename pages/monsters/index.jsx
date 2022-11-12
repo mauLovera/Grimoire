@@ -5,12 +5,8 @@ import { FaSearch } from 'react-icons/fa'
 import Layout from '@/components/Layout/Layout'
 
 import styles from '@/styles/pages/monsters/Monsters.module.scss'
-import {
-  getMonsterDetails,
-  getMonsterList,
-  getMonsterListDetails,
-  getMonsterSearch,
-} from 'services/api-calls'
+import { getMonsterList, getMonsterSearch } from 'services/api-calls'
+import Banner from '@/components/Banner/Banner'
 
 export default function MonstersPage({ monsters }) {
   const [formData, setFormData] = useState({ query: '' })
@@ -33,25 +29,25 @@ export default function MonstersPage({ monsters }) {
 
   return (
     <Layout fit>
-      <section className={styles.banner}>
-        <h1>Monsters</h1>
-        <h2>What are they?</h2>
-        <form className={styles.search} onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            name="query"
-            value={formData.query}
-            onChange={handleChange}
-            autoComplete="off"
-          />
-          <button type="submit">
-            <FaSearch />
-          </button>
-        </form>
-      </section>
+      <Banner header={'Monsters'} subHeader={'What are they?'} />
       <section className={styles.container}>
         <div className={styles.content}>
+          <div className={styles.searchContainer}>
+            <form onSubmit={handleSubmit}>
+              <div className={styles.inputContainer}>
+                <label htmlFor="query">Monsters Name</label>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  name="query"
+                  value={formData.query}
+                  onChange={handleChange}
+                  autoComplete="off"
+                />
+              </div>
+              {/* <button type="submit">Filter Monsters</button> */}
+            </form>
+          </div>
           <ul>
             {monstersData.length
               ? monstersData.map((monster) => {
