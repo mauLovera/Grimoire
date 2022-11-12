@@ -17,11 +17,12 @@
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-
+    
+    width: $size_960px;
+    
     margin: 0 auto;
     padding-inline: $size_24px;
     padding-block: $size_32px;
-    width: $size_960px;
 
     .row {
       display: flex;

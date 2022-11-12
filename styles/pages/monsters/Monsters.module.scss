@@ -5,13 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 0 1 auto;
-  
+  flex: 0 1 $size_420px;
 
-  height: $size_256px;
   @include ff-primary;
   color: $clr-light;
-  margin-block: $size_48px;
 
   h1 {
     font-size: $size_48px;
@@ -24,17 +21,20 @@
 
   .search {
     display: flex;
+
     height: $size_48px;
     margin-top: $size_32px;
 
     input {
-      background-color: transparent;
-      outline: 1px solid $clr-light;
-      border: none;
       height: $size_48px;
-      color: $clr-light;
+      background-color: transparent;
+
+      border: none;
       padding: $size_4px $size_8px;
+      outline: 1px solid $clr-light;
+
       font-size: $size_20px;
+      color: $clr-light;
 
       &::placeholder {
         color: $clr-light-hover;
@@ -65,38 +65,75 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: $size_16px;
   height: fit-content;
-
-  border-top: 1px solid $clr-light;
-  background-color: rgba(0, 0, 0, 0.507);
-  color: $clr-light;
   flex: 1 1 auto;
 
-  .content {
-    ul {
-      -moz-column-count: 3;
-      -webkit-column-count: 3;
-      column-count: 2;
-      column-gap: $size_32px;
-      height: fit-content;
-      width: 100%;
-      
+  padding-inline: $size_24px;
+  padding-block: $size_32px;
+  border-top: 1px solid $clr-light;
 
-      @media (max-width: 510px) {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-        min-height: 5000px;
-        max-height: fit-content;
-      }
+  background-color: rgba(0, 0, 0, 0.507);
+  color: $clr-light;
+
+  .content {
+    width: $size_960px;
+    margin: 0 auto;
+
+    ul {
+      counter-reset: number;
       a {
-        width: fit-content;
-      }
-      li {
-        width: fit-content;
+        display: flex;
+        align-items: center;
+
+        padding-block: $size_12px;
+        padding-inline: $size_12px; 
+
+        @include transition;
+
+        border-top: 0.5px solid $clr-light-hover;
+        border-bottom: 0.5px solid $clr-light-hover;
+
+        &:first-child {
+          border-top: 1.5px solid $clr-light-hover;
+        }
+        &:last-child {
+          border-bottom: 1.5px solid $clr-light-hover;
+        }
+
         &:hover {
-          text-decoration: underline;
+          background-color: $clr-dark-hover;
+          
+          span {
+            background-color: $clr-light;
+            opacity: .9;
+            color: black;
+          }
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: $size_12px;
+
+          span {
+            @include transition;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $size_32px;
+
+            @include ff-secondary;
+            aspect-ratio: 1 / 1;
+
+            outline: 1px solid $clr-light-hover;
+            font-size: $size_14px;
+            color: $clr-light-hover;
+            &::after {
+              counter-increment: number;
+              content: counter(number);
+            }
+          }
         }
       }
     }
