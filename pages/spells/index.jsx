@@ -50,20 +50,22 @@ export default function SpellsPage({ spells }) {
             {spellsData.length
               ? spellsData.map((spell) => {
                   return (
-                    <>
-                      <Link href={`/spells/${spell.index}`} key={spell.name}>
-                        <li>{spell.name}</li>
-                      </Link>
-                    </>
+                    <Link href={`/spells/${spell.index}`} key={spell.name}>
+                      <li>
+                        <span></span>
+                        {spell.name}
+                      </li>
+                    </Link>
                   )
                 })
               : spells.results.map((spell) => {
                   return (
-                    <>
-                      <Link href={`/spells/${spell.index}`} key={spell.name}>
-                        <li>{spell.name}</li>
-                      </Link>
-                    </>
+                    <Link href={`/spells/${spell.index}`} key={spell.name}>
+                      <li>
+                        <span></span>
+                        {spell.name}
+                      </li>
+                    </Link>
                   )
                 })}
           </ul>

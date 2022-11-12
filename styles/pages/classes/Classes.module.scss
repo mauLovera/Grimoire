@@ -101,6 +101,7 @@
         &:hover {
           background-color: $clr-light;
           color: black;
+          opacity: .9;
           .image {
             filter: unset;
           }
