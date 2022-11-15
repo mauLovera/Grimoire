@@ -23,7 +23,8 @@
       gap: $size_4px;
 
       padding-block: $size_20px;
-      padding-inline: $size_48px;
+      padding-inline: $size_12px;
+
       border-top: 1px solid $clr-light-hover;
     }
 
@@ -38,16 +39,16 @@
         flex-direction: column;
         align-items: center;
       }
+
+      @media (max-width: 550px) {
+        padding-inline: unset;
+      }
     }
 
     .abilities {
       display: flex;
       flex-direction: column;
       gap: $size_24px;
-
-      h3 {
-        @include ff-secondary;
-      }
     }
 
     .actions {
@@ -60,7 +61,7 @@
         font-weight: bold;
         border-bottom: 1px solid $clr-light;
         width: fit-content;
-        margin-bottom: $size_12px;
+        margin-bottom: $size_4px;
       }
     }
 
@@ -74,7 +75,7 @@
         font-weight: bold;
         border-bottom: 1px solid $clr-light;
         width: fit-content;
-        margin-bottom: $size_12px;
+        margin-bottom: $size_4px;
       }
     }
   }
