@@ -116,15 +116,19 @@ export default function MonsterPage({ monster }) {
               </div>
             ))}
           </section>
-          <section className={styles.legendaryActions}>
-            <h2>Legendary Actions</h2>
-            {monster.legendary_actions.map((e) => (
-              <div key={e.name}>
-                <h3 className={styles.bold}>{e.name}</h3>
-                <p>{e.desc}</p>
-              </div>
-            ))}
-          </section>
+          {monster.legendary_actions.length ? (
+            <section className={styles.legendaryActions}>
+              <h2>Legendary Actions</h2>
+              {monster.legendary_actions.map((e) => (
+                <div key={e.name}>
+                  <h3 className={styles.bold}>{e.name}</h3>
+                  <p>{e.desc}</p>
+                </div>
+              ))}
+            </section>
+          ) : (
+            ''
+          )}
         </div>
       </section>
     </Layout>
