@@ -1,94 +1,91 @@
 @import '~styles/palette.scss';
 
-.banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1 0 $size_420px;
-
-  @include ff-primary;
-  color: $clr-light;
-
-  h1 {
-    font-size: $size_48px;
-    text-align: center;
-  }
-
-  h2 {
-    @include ff-secondary;
-    font-size: $size_20px;
-    span {
-      text-transform: capitalize;
-    }
-  }
-
-  .image {
-    filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
-      brightness(93%) contrast(97%);
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex: 1 1 auto;
-  padding: $size_4px;
 
-  min-height: fit-content;
-  width: 100%;
-  
+  padding-inline: $size_24px;
+  padding-block: $size_32px;
   border-top: 1px solid $clr-light;
-  background-color: rgba(0, 0, 0, 0.507);
+
+  background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
 
   .content {
-    display: flex;
-    gap: $size_48px;
-    padding: $size_20px;
-    flex-wrap: wrap;
-    height: 100%;
+    width: $size_960px;
     margin: 0 auto;
 
-    .box {
+    section {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: $size_128px;
-      height: fit-content;
+      gap: $size_4px;
 
-      padding: $size_16px;
-      gap: $size_8px;
+      padding-block: $size_20px;
+      padding-inline: $size_48px;
+      border-top: 1px solid $clr-light-hover;
+    }
 
-      background-color: black;
-      outline: 2px solid $clr-light;
+    .stats {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: unset;
+      @include ff-secondary;
 
-      h1 {
-        text-align: center;
+      div {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        @include ff-secondary;
-        text-decoration: underline;
-      }
-
-      p {
-        font-size: $size_20px;
       }
     }
 
-    .list {
+    .abilities {
       display: flex;
       flex-direction: column;
-      gap: $size_8px;
-      height: fit-content;
-      max-width: 40rem;
+      gap: $size_24px;
 
-      h1 {
+      h3 {
         @include ff-secondary;
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: $size_14px;
+
+      h2 {
+        @include ff-secondary;
+        font-weight: bold;
+        border-bottom: 1px solid $clr-light;
+        width: fit-content;
+        margin-bottom: $size_12px;
+      }
+    }
+
+    .legendaryActions {
+      display: flex;
+      flex-direction: column;
+      gap: $size_14px;
+
+      h2 {
+        @include ff-secondary;
+        font-weight: bold;
+        border-bottom: 1px solid $clr-light;
+        width: fit-content;
+        margin-bottom: $size_12px;
       }
     }
   }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  @include ff-secondary;
+  padding-right: $size_4px;
+  font-weight: bold;
 }
