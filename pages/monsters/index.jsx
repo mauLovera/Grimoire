@@ -11,7 +11,6 @@ import Banner from '@/components/Banner/Banner'
 export default function MonstersPage({ monsters }) {
   const [formData, setFormData] = useState({ query: '' })
   const [monstersData, setMonstersData] = useState([])
-  const [monstersDetails, setMonstersDetails] = useState([])
 
   const handleSearch = async (input) => {
     const res = await getMonsterSearch(input)

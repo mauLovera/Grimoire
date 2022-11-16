@@ -6,6 +6,7 @@ import Layout from '@/components/Layout/Layout'
 import { FaSearch } from 'react-icons/fa'
 import { getSpellList, getSpellSearch } from 'services/api-calls'
 import styles from '@/styles/pages/spells/Spells.module.scss'
+import Banner from '@/components/Banner/Banner'
 
 export default function SpellsPage({ spells }) {
   const [formData, setFormData] = useState({ query: '' })
@@ -27,25 +28,25 @@ export default function SpellsPage({ spells }) {
 
   return (
     <Layout fit>
-      <section className={styles.banner}>
-        <h1>Spells</h1>
-        <h2>What do they do?</h2>
-        <form className={styles.search} onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            name="query"
-            value={formData.query}
-            onChange={handleChange}
-            autoComplete="off"
-          />
-          <button type="submit">
-            <FaSearch />
-          </button>
-        </form>
-      </section>
+      <Banner header={'Spells'} subHeader={'What do they do?'} />
       <section className={styles.container}>
         <div className={styles.content}>
+          <div className={styles.searchContainer}>
+            <form onSubmit={handleSubmit}>
+              <div className={styles.inputContainer}>
+                <label htmlFor="query">Spell Name</label>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  name="query"
+                  value={formData.query}
+                  onChange={handleChange}
+                  autoComplete="off"
+                />
+              </div>
+              {/* <button type="submit">Filter Monsters</button> */}
+            </form>
+          </div>
           <ul>
             {spellsData.length
               ? spellsData.map((spell) => {

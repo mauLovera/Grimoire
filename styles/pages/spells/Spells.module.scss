@@ -1,57 +1,5 @@
 @import '~styles/palette.scss';
 
-.banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 0 1 $size_420px;
-
-  padding: $size_24px;
-
-  @include ff-primary;
-  color: $clr-light;
-
-  h1 {
-    font-size: $size_48px;
-  }
-
-  h2 {
-    @include ff-secondary;
-    font-size: $size_20px;
-  }
-
-  .search {
-    display: flex;
-    height: max-content;
-    margin-top: $size_32px;
-
-    input {
-      background-color: transparent;
-      outline: 1px solid $clr-light;
-      border: none;
-      color: $clr-light;
-      padding: $size_4px $size_8px;
-      font-size: $size_20px;
-    }
-
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      height: $size_48px;
-      width: $size_48px;
-
-      background-color: transparent;
-      color: $clr-light;
-      outline: 1px solid $clr-light;
-      border: none;
-      cursor: pointer;
-    }
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -68,6 +16,39 @@
   .content {
     width: $size_960px;
     margin: 0 auto;
+
+    .searchContainer {
+      padding-bottom: $size_24px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        gap: $size_4px;
+
+        .inputContainer {
+          display: flex;
+          flex-direction: column;
+          gap: $size_4px;
+          height: fit-content;
+          width: $size_192px;
+
+          label {
+            @include ff-secondary;
+            text-transform: uppercase;
+            font-size: $size_14px;
+          }
+
+          input {
+            padding-inline: $size_8px;
+            background-color: $clr-dark-hover;
+            color: $clr-light;
+            border: unset;
+            border-radius: 0;
+          }
+        }
+      }
+    }
 
     ul {
       counter-reset: number;
