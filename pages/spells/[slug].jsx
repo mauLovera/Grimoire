@@ -4,38 +4,38 @@ import Layout from '@/components/Layout/Layout'
 
 import styles from '@/styles/pages/spells/Spell.module.scss'
 import { getSpellDetails } from 'services/api-calls'
+import Banner from '@/components/Banner/Banner'
 
 export default function SpellPage({ spell }) {
   return (
     <Layout fit>
-      <section className={styles.banner}>
-        <h1>{spell.name}</h1>
-        <h2>
-          School: <span> {spell.school.name}</span>
-        </h2>
-      </section>
+      <Banner header={spell.name} subHeader={`School: ${spell.school.name}`} />
       <section className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.col}>
-            <div className={styles.box}>
-              <h1>Available For</h1>
-              {spell.classes.length ? (
-                <>
-                  {spell.classes.map((playerClass) => (
-                    <div key={playerClass.index}>
-                      <p>{playerClass.name}</p>
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <p>No player classes may use this spell</p>
-              )}
-            </div>
-          </div>
-          <div className={styles.list}>
-            <h1>Description</h1>
-            <p>{spell.desc[0]}</p>
-          </div>
+          <section>
+            <p>
+              <span className={styles.bold}>Casting Time: </span>
+              {spell.casting_time}
+            </p>
+            <p>
+              <span className={styles.bold}>Range: </span>
+              {spell.range}
+            </p>
+            <p>
+              <span className={styles.bold}>Components: </span>
+              {spell.components}
+            </p>
+            <p>
+              <span className={styles.bold}>Duration: </span>
+              {spell.duration}
+            </p>
+          </section>
+          <section>
+            <h2>Description</h2>
+            {spell.desc.map((text, i) => (
+              <p key={i}>{text}</p>
+            ))}
+          </section>
         </div>
       </section>
     </Layout>
