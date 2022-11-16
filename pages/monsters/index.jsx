@@ -34,7 +34,7 @@ export default function MonstersPage({ monsters }) {
           <div className={styles.searchContainer}>
             <form onSubmit={handleSubmit}>
               <div className={styles.inputContainer}>
-                <label htmlFor="query">Monsters Name</label>
+                <label htmlFor="query">Monster Name</label>
                 <input
                   type="text"
                   placeholder="Search..."

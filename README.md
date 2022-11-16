@@ -1,12 +1,12 @@
 <h1 align='center'> Grimoire </h1>
 
 ## **Deployment Link** 🔗
-https://vercel.com/maulovera/next-grimoire/FY35yRBtAszg742uKnH2VQBPC2nR
+https://next-grimoire.vercel.app/
 
 ## **Description** 📃
 
 Grimoire is a **DnD 5th Edition** front-end application which allows users to look and search within the DnD 5th Edition API!
-
+gt
 ## **Icebox** 🧊
 
 - [ ] Incorportate Framer Motion to enhance UX with animations.
