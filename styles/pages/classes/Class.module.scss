@@ -1,27 +1,5 @@
 @import '~styles/palette.scss';
 
-.banner {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-
-  padding: $size_24px;
-  flex: 1 0 $size_420px;
-
-  @include ff-primary;
-  color: $clr-light;
-
-  h1 {
-    font-size: $size_48px;
-  }
-
-  .image {
-    filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
-      brightness(93%) contrast(97%);
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -110,4 +88,9 @@
       }
     }
   }
+}
+
+.image {
+  filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
+    brightness(93%) contrast(97%);
 }

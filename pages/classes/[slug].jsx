@@ -3,20 +3,24 @@ import Image from 'next/image'
 import Layout from '@/components/Layout/Layout'
 import styles from '@/styles/pages/classes/Class.module.scss'
 import { getClassDetails } from 'services/api-calls'
+import Banner from '@/components/Banner/Banner'
 
 export default function ClassPage({ clss }) {
   return (
     <Layout fit>
-      <section className={styles.banner}>
-        <h1>{clss.name}</h1>
-        <Image
-          src={`/class-images/${clss.name}.svg`}
-          width={100}
-          height={100}
-          alt={`${clss.name}-logo`}
-          className={styles.image}
-        />
-      </section>
+      <Banner
+        header={clss.name}
+        subHeader={
+          <Image
+            src={`/class-images/${clss.name}.svg`}
+            width={100}
+            height={100}
+            alt={`${clss.name}-logo`}
+            className={styles.image}
+          />
+        }
+        reverse
+      />
       <section className={styles.container}>
         <div className={styles.content}>
           <div className={styles.col}>

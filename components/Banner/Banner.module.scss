@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
 
+  margin-top: $size_64px;
   padding: $size_24px;
   flex: 0 1  $size_420px;
 
@@ -23,4 +24,8 @@
     
     @include ff-secondary;
   }
+}
+
+.reverse {
+  flex-direction: column-reverse;
 }
