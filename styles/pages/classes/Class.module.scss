@@ -6,91 +6,55 @@
   align-items: flex-start;
   flex: 1 1 auto;
 
-  padding: $size_4px;
+  padding-inline: $size_24px;
+  padding-block: $size_32px;
   border-top: 1px solid $clr-light;
 
-  height: fit-content;
-  width: 100%;
-
-  background-color: rgba(0, 0, 0, 0.507);
+  background-color: rgba(0, 0, 0, 0.5);
   color: $clr-light;
 
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $size_48px;
-    padding: $size_20px;
-    height: 100%;
+    width: $size_960px;
     margin: 0 auto;
 
-    .box {
+    section {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: $size_128px;
-      height: $size_128px;
+      gap: $size_4px;
 
-      padding: $size_16px;
+      padding-block: $size_20px;
+      padding-inline: $size_12px;
 
-      background-color: black;
-      outline: 2px solid $clr-light;
+      border-top: 1px solid $clr-light-hover;
 
-      h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      h2 {
         @include ff-secondary;
+        font-weight: bold;
+        border-bottom: 1px solid $clr-light;
+        width: fit-content;
+        margin-bottom: $size_8px;
       }
 
-      p {
-        font-size: $size_20px;
-      }
-    }
-
-    .throws {
-      display: flex;
-      flex-direction: column;
-      gap: $size_16px;
-
-      h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include ff-secondary;
-      }
-
-      div {
-        display: flex;
-        justify-content: center;
-        gap: $size_20px;
-
-        font-size: $size_16px;
-
-        p {
-          padding: $size_12px;
-          background-color: black;
-          outline: 2px solid $clr-light;
-          @include ff-secondary;
+      p:empty {
+        &::before {
+          content: 'No joke yet...click the button!';
         }
-      }
-    }
-
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: $size_8px;
-      height: fit-content;
-      overflow: hidden;
-
-      h1 {
-        @include ff-secondary;
       }
     }
   }
 }
 
 .image {
-  filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg)
-    brightness(93%) contrast(97%);
+  filter: invert(98%) sepia(6%) saturate(279%) hue-rotate(11deg) brightness(93%)
+    contrast(97%);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  @include ff-secondary;
+  padding-right: $size_4px;
+  font-weight: bold;
 }

@@ -23,56 +23,41 @@ export default function ClassPage({ clss }) {
       />
       <section className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.col}>
-            <div className={styles.box}>
-              <h1>Hit Die</h1>
-              <p>{clss.hit_die}</p>
-            </div>
-          </div>
-          <div className={styles.throws}>
-            <h1>Saving Throws</h1>
-            <div>
-              {clss.saving_throws.map((x) => (
-                <p key={x.index}>{x.name}</p>
-              ))}
-            </div>
-          </div>
-          <div className={styles.list}>
-            <h1>Proficiencies</h1>
-            {clss.proficiencies.map((x) => (
-              <>
-                <p>{x.name.replace('Saving Throw:', '')}</p>
-              </>
-            ))}
-          </div>
-          <div className={styles.list}>
-            <h1>Proficiency Choices (Choose two)</h1>
-            {clss.proficiency_choices.map((x, i) => (
-              <>
-                {i === 0 ? (
-                  <>
-                    {x.from.options.map((e) => (
-                      <li key={x.index}>
-                        {e.item?.name.replace('Skill:', '')}
-                      </li>
-                    ))}
-                  </>
-                ) : (
-                  ''
-                )}
-              </>
-            ))}
-          </div>
-          <div className={styles.list}>
-            <h1>Starting Equipment</h1>
-            {clss.starting_equipment.length ? (
-              clss.starting_equipment.map((x) => (
-                <p key={x.index}>{x.equipment.name}</p>
-              ))
-            ) : (
-              <p>None</p>
-            )}
-          </div>
+          <section>
+            <p>
+              <span className={styles.bold}>Hit Die: </span>
+              {clss.hit_die}
+            </p>
+            <p>
+              <span className={styles.bold}>Saving Throws: </span>
+              {clss.saving_throws.map((e) => `${e.name} `)}
+            </p>
+            <p>
+              <span className={styles.bold}>Skills: </span>
+              {clss.proficiency_choices.map((e) => e.desc)}
+            </p>
+          </section>
+          <section>
+            <h2>Proficiencies</h2>
+            <p>
+              <span className={styles.bold}>Armor: </span>
+              {clss.proficiencies.map((e) =>
+                e.name.includes('Armor') ? `${e.name} ` : ''
+              )}
+            </p>
+            <p>
+              <span className={styles.bold}>Weapons: </span>
+              {clss.proficiencies.map((e) => {
+                return e.name.includes('Weapon')  ? `${e.name} ` : ''
+              })}
+            </p>
+            <p>
+              <span className={styles.bold}>Equipment: </span>
+              {clss.starting_equipment.map((e) =>
+                `${e.equipment?.name} `
+              )}
+            </p>
+          </section>
         </div>
       </section>
     </Layout>
