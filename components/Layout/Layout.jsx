@@ -18,6 +18,7 @@ export default function Layout({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <link rel="icon" type="image/x-icon" href="/images/fantasy.jpg" />
       </Head>
       <Header />
       <main className={fit ? styles.fitContainer : styles.container}>
