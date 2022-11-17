@@ -9,7 +9,7 @@ import Banner from '@/components/Banner/Banner'
 export default function SpellPage({ spell }) {
   return (
     <Layout fit>
-      <Banner header={spell.name} subHeader={`School: ${spell.school.name}`} />
+      <Banner header={spell.name.replace('/', ' ')} subHeader={`School: ${spell.school.name}`} />
       <section className={styles.container}>
         <div className={styles.content}>
           <section>

@@ -34,12 +34,6 @@
         width: fit-content;
         margin-bottom: $size_8px;
       }
-
-      p:empty {
-        &::before {
-          content: 'No joke yet...click the button!';
-        }
-      }
     }
   }
 }
