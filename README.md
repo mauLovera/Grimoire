@@ -20,11 +20,22 @@ gt
 
 <h1 align='center'> Landing Page </h1>
 
-![Landing Page](https://i.imgur.com/ON4rXOw.png)
+![Landing Page](https://i.imgur.com/ZsXWhe3.png)
 
-<h1 align='center'> Class Page </h1>
+<br>
+<h1 align='center'> Monsters Page </h1>
 
-![Playlist Page](https://i.imgur.com/8LT1hs2.png)
+![Monsters Page](https://i.imgur.com/i43XvFl.png)
+
+<br>
+<h1 align='center'> Monster Page </h1>
+
+![Monster Page](https://i.imgur.com/y15SC6i.png)
+
+<br>
+<h1 align='center'> Classes Page </h1>
+
+![Classes Page](https://i.imgur.com/Hp8QXYZ.png)
 
 
 
