@@ -2,7 +2,7 @@
 
 .container {
   position: absolute;
-  
+
   display: flex;
   align-items: center;
   gap: $size_24px;
@@ -12,11 +12,12 @@
 
   padding-inline: $size_16px;
   background-color: transparent;
-  
-  // background-color: rgba(0, 0, 0, 0.5);
-  // box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
-  // -webkit-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
-  // -moz-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid $clr-light-hover;
+  box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 5px 9px -2px rgba(0, 0, 0, 0.4);
 
   .logo {
     @include ff-primary;
@@ -45,10 +46,7 @@
     }
   }
   @media (max-width: 510px) {
-    height: max-content;
-    flex-direction: column;
-    gap: unset;
-    padding-block: $size_12px;
+    padding-inline: $size_8px;
   }
 }
 
