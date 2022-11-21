@@ -5,7 +5,7 @@ https://next-grimoire.vercel.app/
 
 ## **Description** 📃
 
-Grimoire is a **DnD 5th Edition** front-end application which allows users to look and search within the DnD 5th Edition API!
+Grimoire is a **DnD 5th Edition** front-end application that allows users to search and view results within the DnD 5e API.
 
 ## **Icebox** 🧊
 
