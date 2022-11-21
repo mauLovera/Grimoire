@@ -30,10 +30,10 @@ export default function SpellPage({ spell }) {
               {spell.duration}
             </p>
           </section>
-          <section>
+          <section className={styles.desc}>
             <h2>Description</h2>
             {spell.desc.map((text, i) => (
-              <p key={i}>{text}</p>
+              <p key={i}>{text.replace(/\*/g, '')}</p>
             ))}
           </section>
         </div>
