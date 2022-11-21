@@ -62,41 +62,47 @@ export default function MonsterPage({ monster }) {
           <section>
             <p>
               <span className={styles.bold}>Saving Throws: </span>
-              {monster.proficiencies.map((prof) => {
-                const profName = prof.proficiency.name.substring(
-                  prof.proficiency.name.indexOf(':') + 1
-                )
-                return profName
-                  .split(' ')
-                  .map((e) =>
-                    e.length === 3
-                      ? `${e.charAt(0)}${e.substring(1).toLowerCase()} +${
-                          prof.value
-                        } `
-                      : ''
+              <span className={styles.results}>
+                {monster.proficiencies.map((prof) => {
+                  const profName = prof.proficiency.name.substring(
+                    prof.proficiency.name.indexOf(':') + 1
                   )
-              })}
+                  return profName
+                    .split(' ')
+                    .map((e) =>
+                      e.length === 3
+                        ? `${e.charAt(0)}${e.substring(1).toLowerCase()} +${
+                            prof.value
+                          } `
+                        : ''
+                    )
+                })}
+              </span>
             </p>
             <p>
               <span className={styles.bold}>Skills: </span>
-              {monster.proficiencies.map((prof) => {
-                const profName = prof.proficiency.name.substring(
-                  prof.proficiency.name.indexOf(':') + 1
-                )
-                return profName
-                  .split(' ')
-                  .map((e) => (e.length > 3 ? `${e} +${prof.value} ` : ''))
-              })}
+              <span className={styles.results}>
+                {monster.proficiencies.map((prof) => {
+                  const profName = prof.proficiency.name.substring(
+                    prof.proficiency.name.indexOf(':') + 1
+                  )
+                  return profName
+                    .split(' ')
+                    .map((e) => (e.length > 3 ? `${e} +${prof.value} ` : ''))
+                })}
+              </span>
             </p>
             <p className={styles.capitalize}>
               <span className={styles.bold}>Senses: </span>
-              {Object.keys(monster.senses).map(
-                (e) => `${e.replace('_', ' ')} ${monster.senses[e]} `
-              )}
+              <span className={styles.results}>
+                {Object.keys(monster.senses).map(
+                  (e) => `${e.replace('_', ' ')} ${monster.senses[e]} `
+                )}
+              </span>
             </p>
             <p className={styles.capitalize}>
               <span className={styles.bold}>Languages: </span>
-              {monster.languages}
+              <span className={styles.results}>{monster.languages}</span>
             </p>
           </section>
           <section className={styles.abilities}>
