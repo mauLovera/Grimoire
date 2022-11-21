@@ -71,7 +71,8 @@
     padding-bottom: $size_48px;
 
     .box {
-      width: 100%;
+      margin: 0 auto;
+      width: fit-content;
       border: unset;
     }
   }
