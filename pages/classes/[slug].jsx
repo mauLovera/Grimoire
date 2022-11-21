@@ -41,21 +41,25 @@ export default function ClassPage({ clss }) {
             <h2>Proficiencies</h2>
             <p>
               <span className={styles.bold}>Armor: </span>
-              {clss.proficiencies.map((e) =>
-                e.name.includes('Armor') ? `${e.name} ` : ''
-              )}
+              <span className={styles.results}>
+                {clss.proficiencies.map((e) =>
+                  e.name.includes('Armor') ? `${e.name} ` : ''
+                )}
+              </span>
             </p>
             <p>
               <span className={styles.bold}>Weapons: </span>
-              {clss.proficiencies.map((e) => {
-                return e.name.includes('Weapon')  ? `${e.name} ` : ''
-              })}
+              <span className={styles.results}>
+                {clss.proficiencies.map((e) => {
+                  return e.name.includes('Weapon') ? `${e.name} ` : ''
+                })}
+              </span>
             </p>
             <p>
               <span className={styles.bold}>Equipment: </span>
-              {clss.starting_equipment.map((e) =>
-                `${e.equipment?.name} `
-              )}
+              <span className={styles.results}>
+                {clss.starting_equipment.map((e) => `${e.equipment?.name} `)}
+              </span>
             </p>
           </section>
         </div>
