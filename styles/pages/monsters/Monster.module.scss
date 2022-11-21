@@ -90,3 +90,7 @@
   padding-right: $size_4px;
   font-weight: bold;
 }
+
+.results:empty::after {
+  content: 'None';
+}
