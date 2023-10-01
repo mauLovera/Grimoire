@@ -44,7 +44,6 @@ export default function MonstersPage({ monsters }) {
                   autoComplete="off"
                 />
               </div>
-              {/* <button type="submit">Filter Monsters</button> */}
             </form>
           </div>
           <ul>

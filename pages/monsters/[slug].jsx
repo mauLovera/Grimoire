@@ -42,9 +42,10 @@ export default function MonsterPage({ monster }) {
             </div>
           </section>
           <section>
+            {console.log(monster)}
             <p>
               <span className={styles.bold}>Armor Class: </span>
-              {monster.armor_class}
+              {monster.armor_class[0].value}
             </p>
             <p>
               <span className={styles.bold}>Hit Points: </span>
@@ -115,12 +116,12 @@ export default function MonsterPage({ monster }) {
           </section>
           <section className={styles.actions}>
             <h2>Actions</h2>
-            {monster.actions.map((e) => (
-              <div key={e.name}>
-                <h3 className={styles.bold}>{e.name}</h3>
-                <p>{e.desc}</p>
-              </div>
-            ))}
+              {monster.actions.map((e) => (
+                <div key={e.name}>
+                  <h3 className={styles.bold}>{e.name}</h3>
+                  <p>{e.desc}</p>
+                </div>
+              ))}
           </section>
           {monster.legendary_actions.length ? (
             <section className={styles.legendaryActions}>
